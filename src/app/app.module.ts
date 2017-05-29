@@ -5,11 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LifeComponent } from './life/life.component';
+import { ChildComponent } from './child/child.component';
+import { Life2Component } from './life2/life2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LifeComponent
+    LifeComponent,
+    ChildComponent,
+    Life2Component
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewChecked, AfterViewInit, Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-child2',
   templateUrl: './child2.component.html',
   styleUrls: ['./child2.component.css']
 })
-export class Child2Component implements OnInit {
+export class Child2Component implements OnInit, AfterViewInit, AfterViewChecked {
 
   constructor() { }
 
@@ -14,6 +14,14 @@ export class Child2Component implements OnInit {
 
   greeting(name: string) {
     console.log('hello ' + name);
+  }
+
+  ngAfterViewInit() {
+    console.log('子组件的视图初始化完毕');
+  }
+
+  ngAfterViewChecked() {
+    console.log('子组件的视图变更检测完毕');
   }
 
 }
